@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tensor Network Lab — TFIM (MPS/DMRG + TEBD)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1>Tensor Network Lab</h1>
+      <p class="subtitle">TFIM ground state via MPS/DMRG + TEBD quench (quimb)</p>
+
+      <div id="controls"></div>
+
+      <div class="row gap">
+        <button id="runBtn">Run ground state</button>
+        <button id="scanBtn">Scan h</button>
+        <button id="tebdBtn">Run TEBD</button>
+      </div>
+
+      <div class="presets">
+        <h3>Presets</h3>
+        <div id="presetButtons" class="row wrap"></div>
+      </div>
+
+      <div class="status">
+        <div><strong>Status:</strong> <span id="statusText">Idle</span></div>
+        <div class="small" id="timingText"></div>
+      </div>
+
+      <div class="small tips">
+        <p><strong>Tip:</strong> Start with N=24, chi=32, cutoff=1e-10.</p>
+        <p><strong>TEBD Tip:</strong> dt=0.05, steps=100 is a good demo.</p>
+        <p><strong>Note:</strong> Near critical (h/J~1) needs larger χ.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="grid">
+        <div class="card">
+          <h2>Energy & Magnetization</h2>
+          <div id="plotEnergyMag" class="plot"></div>
+        </div>
+
+        <div class="card">
+          <h2>Entanglement Entropy Profile</h2>
+          <div id="plotEntropy" class="plot"></div>
+        </div>
+
+        <div class="card">
+          <h2>Correlator C(r) = ⟨Z_i Z_{i+r}⟩ (center site)</h2>
+          <div id="plotCorr" class="plot"></div>
+        </div>
+
+        <div class="card">
+          <h2>Scan: Magnetization vs h</h2>
+          <div id="plotScan" class="plot"></div>
+        </div>
+
+        <div class="card" style="grid-column: 1 / -1;">
+          <h2>Dynamics (TEBD): mZ(t), mX(t), and Entanglement S(mid)(t)</h2>
+          <div id="plotDynamics" class="plot" style="height: 360px;"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+:root {
+  --bg: #0b0f17;
+  --panel: #121a27;
+  --card: #0f1622;
+  --text: #e6edf3;
+  --muted: #a9b4c0;
+  --border: rgba(255,255,255,0.10);
+  --accent: #4ea1ff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  padding: 18px;
+  background: linear-gradient(180deg, var(--panel), #0b0f17);
+  border-right: 1px solid var(--border);
+}
+
+h1 { margin: 0 0 6px; font-size: 20px; }
+.subtitle { margin: 0 0 14px; color: var(--muted); font-size: 13px; }
+
+.main { padding: 18px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 650;
+}
+
+.plot { width: 100%; height: 320px; }
+
+.row { display: flex; align-items: center; }
+.wrap { flex-wrap: wrap; }
+.gap { gap: 10px; }
+
+button {
+  background: rgba(78,161,255,0.16);
+  border: 1px solid rgba(78,161,255,0.35);
+  color: var(--text);
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover { background: rgba(78,161,255,0.24); }
+
+.control {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+}
+
+.control label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.control input[type="range"] { width: 100%; }
+.control input[type="number"], .control select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.25);
+  color: var(--text);
+}
+
+.small { color: var(--muted); font-size: 12px; }
+.status { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--border); }
+.tips { margin-top: 12px; }
+.presets h3 { margin: 16px 0 8px; font-size: 13px; color: var(--muted); }
