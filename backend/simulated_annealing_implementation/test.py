@@ -24,10 +24,22 @@ def run_examples() -> None:
             sa_iterations=sa_iterations,
             n_sa_runs=n_sa_runs,
         )
+#Debug to check that the code works on smaller networks
+def run_debug():
+    print("DEBUG MODE - lightweight tests\n")
 
+    experiments = [
+        ("2x2 Square, chi=2", make_2x2_tn(2), 500,5),
+        ("2x2 Square, chi=3", make_2x2_tn(3), 500,5),
+        ("Small ER graph", make_erdos_renyi_tn(7, p=0.5, chi=2, seed=0), 500,5),
+    ]
+
+    for label, tn, sa_iter, runs in experiments:
+        compare(tn, label, sa_iter, runs)
 
 def main() -> None:
-    run_examples()
+    # run_examples() #To uncomment to run the actual code
+    run_debug()
 
 
 if __name__ == "__main__":

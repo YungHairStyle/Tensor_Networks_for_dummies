@@ -6,3 +6,4 @@ scipy>=1.10
 quimb>=1.6
 cotengra>=0.6
 pytest>=7.0
+opt_eisum>=3.0.0
