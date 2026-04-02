@@ -28,8 +28,8 @@ class ClassicalSolverConfig:
     hermiticity_tol:
         Numerical tolerance for Hermiticity checks.
     """
-    store_state_vector: bool = True
-    compute_observables: bool = True
+    store_state_vector: bool = False
+    compute_observables: bool = False
     check_hermiticity: bool = True
     hermiticity_tol: float = 1e-10
 
