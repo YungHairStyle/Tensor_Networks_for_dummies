@@ -8,8 +8,8 @@ import numpy as np
 import quimb as qu
 import quimb.tensor as qtn
 
-from backend.physics.hamiltonians import build_tfim_localham
-from backend.tensor.mps_utils import product_state_mps
+from old.backend.physics.hamiltonians import build_tfim_localham
+from old.backend.tensor.mps_utils import product_state_mps
 
 
 @dataclass

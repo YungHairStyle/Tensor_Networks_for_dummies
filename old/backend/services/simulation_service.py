@@ -1,9 +1,9 @@
 import time
-from backend.api.schemas import GroundStateRequest
-from backend.physics.hamiltonians import build_tfim_mpo
-from backend.physics.dmrg import run_dmrg_ground_state
-from backend.physics.observables import magnetizations, entanglement_profile, correlator_zz_center
-from backend.utils.validation import require_model_supported
+from old.backend.api.schemas import GroundStateRequest
+from old.backend.physics.hamiltonians import build_tfim_mpo
+from old.backend.physics.dmrg import run_dmrg_ground_state
+from old.backend.physics.observables import magnetizations, entanglement_profile, correlator_zz_center
+from old.backend.utils.validation import require_model_supported
 
 def run_ground_state(req: GroundStateRequest) -> dict:
     #require_model_supported(req.model) #check if model is supported

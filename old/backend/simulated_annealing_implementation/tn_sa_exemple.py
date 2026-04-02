@@ -5,7 +5,7 @@ import time
 import numpy as np
 import quimb.tensor as qtn
 
-from tn_sa_core import GreedySearch, SAConfig, SimulatedAnnealing
+from old.backend.simulated_annealing_implementation.tn_sa_core import GreedySearch, SAConfig, SimulatedAnnealing
 
 
 def make_square_tn(L: int, chi: int = 2, seed: int | None = None):

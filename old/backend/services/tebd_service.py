@@ -1,6 +1,6 @@
-from backend.api.schemas import TEBDRequest
-from backend.utils.validation import require_model_supported
-from backend.physics.tebd import tebd_quench_tfim
+from old.backend.api.schemas import TEBDRequest
+from old.backend.utils.validation import require_model_supported
+from old.backend.physics.tebd import tebd_quench_tfim
 
 def run_tebd(req: TEBDRequest) -> dict:
     require_model_supported(req.model)

@@ -1,4 +1,4 @@
-from tn_sa_exemple import compare, make_2x2_tn, make_erdos_renyi_tn, make_square_tn
+from old.backend.simulated_annealing_implementation.tn_sa_exemple import compare, make_2x2_tn, make_erdos_renyi_tn, make_square_tn
 
 
 def run_examples() -> None:

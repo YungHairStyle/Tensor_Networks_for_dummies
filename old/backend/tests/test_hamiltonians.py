@@ -1,7 +1,7 @@
 import numpy as np
 
-from backend.physics.hamiltonians import build_tfim_mpo
-from backend.tensor.mpo_utils import mpo_to_dense, is_hermitian_dense
+from old.backend.physics.hamiltonians import build_tfim_mpo
+from old.backend.tensor.mpo_utils import mpo_to_dense, is_hermitian_dense
 
 
 def test_tfim_mpo_is_hermitian_small():

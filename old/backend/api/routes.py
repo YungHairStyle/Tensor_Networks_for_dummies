@@ -1,8 +1,8 @@
 from fastapi import APIRouter
-from backend.api.schemas import GroundStateRequest, ScanRequest, TEBDRequest
-from backend.services.simulation_service import run_ground_state
-from backend.services.scan_service import run_scan
-from backend.services.tebd_service import run_tebd
+from old.backend.api.schemas import GroundStateRequest, ScanRequest, TEBDRequest
+from old.backend.services.simulation_service import run_ground_state
+from old.backend.services.scan_service import run_scan
+from old.backend.services.tebd_service import run_tebd
 
 router = APIRouter()
 

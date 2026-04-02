@@ -1,8 +1,8 @@
 import numpy as np
 
-from backend.physics.hamiltonians import build_tfim_mpo
-from backend.physics.dmrg import run_dmrg_ground_state
-from backend.tensor.mpo_utils import mpo_to_dense, ground_energy_exact
+from old.backend.physics.hamiltonians import build_tfim_mpo
+from old.backend.physics.dmrg import run_dmrg_ground_state
+from old.backend.tensor.mpo_utils import mpo_to_dense, ground_energy_exact
 
 
 def test_dmrg_matches_exact_small_N():

@@ -1,10 +1,10 @@
 import time
 import numpy as np
-from backend.api.schemas import ScanRequest
-from backend.physics.hamiltonians import build_tfim_mpo
-from backend.physics.dmrg import run_dmrg_ground_state
-from backend.physics.observables import magnetizations
-from backend.utils.validation import require_model_supported
+from old.backend.api.schemas import ScanRequest
+from old.backend.physics.hamiltonians import build_tfim_mpo
+from old.backend.physics.dmrg import run_dmrg_ground_state
+from old.backend.physics.observables import magnetizations
+from old.backend.utils.validation import require_model_supported
 
 def run_scan(req: ScanRequest) -> dict:
     require_model_supported(req.model)

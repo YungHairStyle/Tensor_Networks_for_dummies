@@ -1,8 +1,8 @@
 import numpy as np
 
-from backend.physics.hamiltonians import build_tfim_mpo
-from backend.physics.dmrg import run_dmrg_ground_state
-from backend.physics.observables import magnetizations, entanglement_profile, correlator_zz_center
+from old.backend.physics.hamiltonians import build_tfim_mpo
+from old.backend.physics.dmrg import run_dmrg_ground_state
+from old.backend.physics.observables import magnetizations, entanglement_profile, correlator_zz_center
 
 
 def test_observables_sane_ranges():

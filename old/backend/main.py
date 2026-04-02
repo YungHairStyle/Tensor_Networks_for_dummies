@@ -3,8 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 
-from backend.config import settings
-from backend.api.routes import router
+from old.backend.config import settings
+from old.backend.api.routes import router
 
 app = FastAPI(title=settings.app_title)
 
