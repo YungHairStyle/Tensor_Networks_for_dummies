@@ -1,20 +1,24 @@
-AI generated README:
+# Ground-state benchmarks with matrix product states
 
-# Tensor Network Lab (TFIM + MPS/DMRG) — quimb + FastAPI + HTML
+Exploratory numerical work comparing exact diagonalization with a finite matrix-product-state implementation using imaginary-time time-evolving block decimation (TEBD). The benchmark driver covers transverse-field Ising, XXZ, and XY spin chains.
 
-## What this does
-- Simulates the 1D Transverse-Field Ising Model (TFIM) ground state using DMRG (MPS) in quimb.
-- Serves an HTML frontend where you can adjust N, J, h, bond dimension, cutoff, etc.
-- Plots energy, magnetization, entanglement entropy profile, and correlators.
+## Implementation
 
-## Install
-```bash
-python -m venv .venv
-source .venv/bin/activate   # mac/linux
-# .venv\Scripts\activate    # windows
-pip install -r requirements.txt
-```
-To run server:
-```bash
-python -m uvicorn backend.main:app --reload 
-```
+- `core/`: Hamiltonian definitions and shared result structures.
+- `classical_solver.py`: exact-diagonalization reference calculations.
+- `TN_solver.py`: MPS representation, imaginary-time evolution, and diagnostics.
+- `main.py`: parameter sweeps and repeated tensor-network runs.
+- `benchmark_plotter.py`: energy errors, fidelity, runtime, variance, residual, and magnetization plots.
+- `figures/`: saved benchmark figures; `old/` retains earlier experiments.
+
+## Running
+
+Run `python main.py` from the repository root. The benchmark code uses NumPy, SciPy, and Matplotlib; the existing requirements file also contains dependencies from earlier experiments. Inspect the sweep settings in `main.py` before running the complete set.
+
+The current TEBD implementation targets open, nearest-neighbour spin-1/2 chains. Bond dimension, imaginary-time step schedule, and convergence affect the result. Dense reference calculations grow exponentially with system size. The saved figures are exploratory benchmarks, rather than a general performance or convergence guarantee.
+
+This repository is a numerical learning project under development. The current root-level workflow is a Python benchmark program; earlier web-interface experiments are separate from it.
+
+---
+[Asaad Hanna — research, CV, and contact](https://yunghairstyle.github.io/)
+
